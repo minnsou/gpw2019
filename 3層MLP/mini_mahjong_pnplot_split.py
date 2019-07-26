@@ -335,33 +335,33 @@ def train_policy_network(num, Dence_number_list, input_shape, n_trials, EPOCHS):
     plt.xlabel('Epoch')
     plt.ylabel('categorical accuracy')
     plt.legend()
-    plt.savefig('result2.png')
+    plt.savefig('result3.png')
     
     print('result acc mean\n', result_mean_dict)
     print('result acc std\n', result_std_dict)
     print('pred accuracy rate(mean)\n', pred_acc_dict)
     print('time (sec)\n', time_dict)
 
-num = 1
-Dence_number_list = [100, 50]
-input_shape = (n, m)
-n_trials = 2
-EPOCHS = 300
+#num = 1
+#Dence_number_list = [1000, 500, 300, 100, 50]
+#input_shape = (n, m)
+#n_trials = 5
+#EPOCHS = 3000
 #train_policy_network(num, Dence_number_list, input_shape, n_trials, EPOCHS)
 
-num = 2
+#num = 2
+#Dence_number_list = [1000, 500, 300, 100, 50]
+#input_shape = (n, l+1)
+#n_trials = 5
+#EPOCHS = 3000
+#train_policy_network(num, Dence_number_list, input_shape, n_trials, EPOCHS)
+
+num = 3
 Dence_number_list = [1000, 500, 300, 100, 50]
-input_shape = (n, l+1)
+input_shape = (n, l)
 n_trials = 5
 EPOCHS = 3000
 train_policy_network(num, Dence_number_list, input_shape, n_trials, EPOCHS)
-
-num = 3
-#Dence_number_list = [100]
-input_shape = (n, l)
-#n_trials = 3
-#EPOCHS = 100
-#train_policy_network(num, Dence_number_list, input_shape, n_trials, EPOCHS)
 
 
 
