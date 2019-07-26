@@ -1,6 +1,6 @@
 ## Overview
 
-GPW 2019用のレポジトリです。麻雀におけるpolicy function関連の研究に用いたコードをおいています、
+GPW 2019用のレポジトリです。麻雀におけるpolicy function関連の研究に用いたコードをおいています。
 
 abstractディレクトリには、extended abstractの実験のコードとその結果を載せています。
 
