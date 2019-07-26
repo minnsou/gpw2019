@@ -11,15 +11,15 @@ abstractディレクトリには、extended abstractの実験のコードとそ�
 abstractフォルダには3層MLPの実験、Gaoらの再現実験、築地らの再現実験、Residual Blockの実験の4つのコードとその結果を置いています。
 
 1. 3層MLPの実験
-   コード：mini_mahjong_pnsplot_split.py
-   結果：result3.outとresult3.png  
+   - コード：mini_mahjong_pnsplot_split.py
+   - 結果：result3.outとresult3.png  
 1. Gaoらの再現実験
-   コードと結果：mini_mahjong_PNplot_gaoCNN.ipynb  
+   - コードと結果：mini_mahjong_PNplot_gaoCNN.ipynb  
 1. 築地らの再現実験
-   コードと結果：mini_mahjong_PNplot_tsukijiCNN.ipynb  
+   - コードと結果：mini_mahjong_PNplot_tsukijiCNN.ipynb  
 1. Residual Blockの実験
-   コード：mini_mahjong_pnplot_resnet.py
-   結果：result_resnet_3.outとresult_resnet_3.png
+   - コード：mini_mahjong_pnplot_resnet.py
+   - 結果：result_resnet_3.outとresult_resnet_3.png
 
 ## Requirement
 
