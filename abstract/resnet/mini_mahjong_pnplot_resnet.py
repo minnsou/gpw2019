@@ -45,7 +45,6 @@ def number_state_slow(n,m,l): # 全ての手牌の組み合わせの数を出力
     for seq in itertools.product(range(n), repeat = m): # 直積を作る関数, n=9 m=5 なら 9 ** 5 回繰り返す　
         if is_valid(seq,l):
             count += 1
-            #print(list(seq))
     return count
     
 def generate_all_l(n, m, l=4): # 全ての手牌の組み合わせをタプルで出力する関数
@@ -58,7 +57,6 @@ def generate_all_l(n, m, l=4): # 全ての手牌の組み合わせをタプル�
 def states_to_hist(state_list, n): # 手牌(state)を、牌種ごとの枚数のリスト(長さn)に変換する関数
     hist_list = []
     for state in state_list:
-        #print(state)
         ret = [0] * n # ret = [0,0,...,0]
         for c in state:
             ret[c] += 1
@@ -66,7 +64,6 @@ def states_to_hist(state_list, n): # 手牌(state)を、牌種ごとの枚数の
     return hist_list
 
 def hand_to_prob_and_state(hand, state_nml, n, m, l=4): # ある手牌(hand)における、1枚ツモる時の遷移確率(prob)と手牌(state)のindexのタプルを出す関数
-    #print(state_nml)
     ret = [l] * n  #  残り枚数を表すリスト
     for h in hand:
         ret[h] -= 1
@@ -77,16 +74,14 @@ def hand_to_prob_and_state(hand, state_nml, n, m, l=4): # ある手牌(hand)に�
             continue
         prob = ret[i] / yama_sum # 遷移確率
         state = tuple(sorted(list(hand) + [i])) # 遷移後の手牌
-        #print(state)
         state_index = state_nml.index(state) # 遷移後の手牌のindex
-        #print(state_index)
         state_list.append((prob, state_index))
     return state_list
 
 def state_to_hand(state): # ある手牌stateに遷移できるhandを出力する関数
     return list(set(tuple(state[:i] + state[i+1:]) for i in range(len(state)))) # i番目の要素を取り除く
 
-def is_win_sub(hist, two, three):
+def is_win_sub(hist, two, three): # twoには雀頭の数、threeには面子の数を入れてhistに入っている手牌のあがり判定をする
     if any(x < 0 for x in hist):
         return False # この行を消したかったら、順子判定のところで手牌の枚数が負になるものを弾いておく
     if two == 0 and three == 0:
@@ -100,12 +95,12 @@ def is_win_sub(hist, two, three):
         return True
     return False
 
-def is_win_main(hist):
+def is_win_main(hist): # あがり判定をする関数
     n_two = 1 if sum(hist) % 3 == 2 else 0
     n_three = sum(hist) // 3
     return is_win_sub(hist, n_two, n_three)
 
-def value_iteration(n, m, l, gamma):
+def value_iteration(n, m, l, gamma): # 価値反復法により状態の価値を求める関数
     state_nml = generate_all_l(n, m, l)
     hand_nml = generate_all_l(n, m-1, l)
     hist_nml = states_to_hist(state_nml, n)
@@ -144,7 +139,7 @@ def one_hot_vector2(hists, n, l=4): # histをそのままone-hotにした(手牌
             results[i][j][hist_i] = 1
     return results
 
-def one_hot_vector3(hists, n, l=4): # 上に近いけど、持ってる枚数より小さい数も1で埋めた(手牌１つがn * lの行列に対応)
+def one_hot_vector3(hists, n, l=4): # one_hot_vecto2に近いけど、持ってる枚数より小さい数も1で埋めた(手牌１つがn * lの行列に対応)
     results = np.zeros((len(hists), n, l))
     for i in range(len(hists)):
         for j, hist_i in enumerate(hists[i]):
@@ -210,10 +205,8 @@ hand_nml = generate_all_l(n, m - 1, l)
 
 n = 34
 max_value_discard_list, discard_state_nml = states_to_max_value_list(state_nml, hand_nml, value_hand_nml, n, m, l)
-#for i in max_value_discard_list: print(i) 
 discard_hist_nml = states_to_hist(discard_state_nml, n)
 discard_ans_vector_nml = np.array(discard_ans_prob_vector(max_value_discard_list, n, m, l))
-#print(discard_ans_vector_nml[:5])
 
 """### Policy Networkに必要な関数の定義"""
 
@@ -235,38 +228,6 @@ def one_hot(discard_state_nml, num):
     else:
         discard_hist_nml = states_to_hist(discard_state_nml, n)
         return one_hot_vector3(discard_hist_nml, n, l)
-
-# predictionsから求めた捨て牌のリストを返す関数
-def make_pred_arg_list_split(predictions, discard_state_test):
-    pred_arg_list = []
-    for i  in range(len(predictions)):
-        tile = np.argmax(predictions[i])
-        if tile not in discard_state_test[i]:
-            max_val = 0
-            max_tile = 0
-            for t in discard_state_test[i]:
-                if predictions[i][t] > max_val:
-                    max_val = predictions[i][t]
-                    max_tile = t
-            tile = max_tile
-        pred_arg_list.append(tile)
-    return pred_arg_list
-
-# 正解率を返す関数
-def acc_score_split(pred_arg_list, discard_state_test): 
-    tr_count = 0
-    fal_count = 0
-    for i, pred_arg in enumerate(pred_arg_list):
-        #print(i, j)
-        for state, discard_set in max_value_discard_list:
-            if discard_state_test[i] == state:
-                if pred_arg in discard_set:
-                    tr_count += 1
-                else:
-                    fal_count += 1
-    print('true count {}  false count {}'.format(tr_count, fal_count))
-    print('accuracy rate', tr_count / (tr_count + fal_count))
-    return tr_count / (tr_count + fal_count)
 
 
 """### train"""
@@ -381,7 +342,6 @@ for i in range(repeat_num):
     discard_state_train, discard_state_test, discard_ans_vector_train, discard_ans_vector_test = train_test_split(discard_state_nml, discard_ans_vector_nml, test_size=0.25)
     one_hot_discard_state_train = one_hot(discard_state_train, num).reshape(len(discard_state_train), n, l, 1)
     one_hot_discard_state_test = one_hot(discard_state_test, num).reshape(len(discard_state_test), n, l, 1)
-    #print(discard_ans_vector_test[:5])
 
     # Input image dimensions.
     input_shape = one_hot_discard_state_train.shape[1:]
@@ -429,7 +389,7 @@ plt.plot(hist['epoch'], sum_val_acc_result / repeat_num, label='valid acc')
 plt.xlabel('Epoch')
 plt.ylabel('accuracy')
 plt.legend()
-plt.savefig('result_resnet_5.png')
+plt.savefig('result_resnet_'+str(n_trials)+'.png')
 
 print('\nTest_loss(mean)', round(sum(sum_test_loss) / repeat_num, 5))
 print('Test_accuracy(mean)', round(sum(sum_test_acc) / repeat_num, 5))
