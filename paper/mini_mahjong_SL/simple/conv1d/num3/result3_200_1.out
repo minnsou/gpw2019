@@ -1,0 +1,273 @@
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+iteration
+Using TensorFlow backend.
+WARNING: Logging before flag parsing goes to stderr.
+W1004 02:22:05.804343 140363536635648 deprecation_wrapper.py:119] From /home/t_shimizu/.pyenv/versions/anaconda3-2019.03/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:95: The name tf.reset_default_graph is deprecated. Please use tf.compat.v1.reset_default_graph instead.
+
+W1004 02:22:05.804526 140363536635648 deprecation_wrapper.py:119] From /home/t_shimizu/.pyenv/versions/anaconda3-2019.03/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:98: The name tf.placeholder_with_default is deprecated. Please use tf.compat.v1.placeholder_with_default instead.
+
+W1004 02:22:05.812368 140363536635648 deprecation_wrapper.py:119] From /home/t_shimizu/.pyenv/versions/anaconda3-2019.03/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:102: The name tf.get_default_graph is deprecated. Please use tf.compat.v1.get_default_graph instead.
+
+W1004 02:22:05.852021 140363536635648 deprecation_wrapper.py:119] From /home/t_shimizu/.pyenv/versions/anaconda3-2019.03/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:517: The name tf.placeholder is deprecated. Please use tf.compat.v1.placeholder instead.
+
+W1004 02:22:05.853360 140363536635648 deprecation_wrapper.py:119] From /home/t_shimizu/.pyenv/versions/anaconda3-2019.03/lib/python3.7/site-packages/keras/backend/tensorflow_backend.py:4138: The name tf.random_uniform is deprecated. Please use tf.random.uniform instead.
+
+W1004 02:22:05.900816 140363536635648 deprecation_wrapper.py:119] From /home/t_shimizu/.pyenv/versions/anaconda3-2019.03/lib/python3.7/site-packages/keras/optimizers.py:790: The name tf.train.Optimizer is deprecated. Please use tf.compat.v1.train.Optimizer instead.
+
+W1004 02:22:05.955124 140363536635648 deprecation.py:323] From /home/t_shimizu/.pyenv/versions/anaconda3-2019.03/lib/python3.7/site-packages/tensorflow/python/ops/math_grad.py:1250: add_dispatch_support.<locals>.wrapper (from tensorflow.python.ops.array_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.where in 2.0, which has the same broadcast rule as np.where
+2019-10-04 02:22:06.079612: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2019-10-04 02:22:06.082945: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 3990680000 Hz
+2019-10-04 02:22:06.083357: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x5642dd0ce720 executing computations on platform Host. Devices:
+2019-10-04 02:22:06.083371: I tensorflow/compiler/xla/service/service.cc:175]   StreamExecutor device (0): <undefined>, <undefined>
+2019-10-04 02:22:06.142144: W tensorflow/compiler/jit/mark_for_compilation_pass.cc:1412] (One-time warning): Not using XLA:CPU for cluster because envvar TF_XLA_FLAGS=--tf_xla_cpu_global_jit was not set.  If you want XLA:CPU, either set that envvar, or use experimental_jit_scope to enable XLA:CPU.  To confirm that XLA is active, pass --vmodule=xla_compilation_cache=1 (as a proper command-line flag, not via TF_XLA_FLAGS) or set the envvar XLA_FLAGS=--xla_hlo_profile.
+[I 2019-10-04 02:26:40,998] Finished trial#0 resulted in value: 0.8006158583525789. Current best value is 0.8006158583525789 with parameters: {'n_conv1d_layers': 2, 'n_filters_|0': 63, 'n_filters_|1': 22, 'n_layers': 2, 'n_units_l0': 155.9039269031288, 'n_units_l1': 100.47818673688238, 'lr': 4.9589857809058936e-05}.
+[I 2019-10-04 02:39:57,700] Finished trial#1 resulted in value: 0.8391070053887606. Current best value is 0.8391070053887606 with parameters: {'n_conv1d_layers': 2, 'n_filters_|0': 24, 'n_filters_|1': 52, 'n_layers': 1, 'n_units_l0': 894.1351933465415, 'lr': 0.0003684789358515421}.
+[I 2019-10-04 02:45:19,823] Finished trial#2 resulted in value: 0.8079291762894534. Current best value is 0.8391070053887606 with parameters: {'n_conv1d_layers': 2, 'n_filters_|0': 24, 'n_filters_|1': 52, 'n_layers': 1, 'n_units_l0': 894.1351933465415, 'lr': 0.0003684789358515421}.
+[I 2019-10-04 02:59:37,577] Finished trial#3 resulted in value: 0.844495765973826. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 03:04:33,589] Finished trial#4 resulted in value: 0.8090839107464239. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 03:04:34,998] Setting status of trial#5 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 03:04:36,250] Setting status of trial#6 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 03:04:37,457] Setting status of trial#7 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 03:05:08,029] Setting status of trial#8 as TrialState.PRUNED. Trial was pruned at epoch 65.
+[I 2019-10-04 03:05:09,451] Setting status of trial#9 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 03:32:08,790] Finished trial#10 resulted in value: 0.7736720553813667. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 03:38:42,664] Finished trial#11 resulted in value: 0.8167821401077752. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 03:50:30,146] Finished trial#12 resulted in value: 0.8356428021096192. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 03:50:31,857] Setting status of trial#13 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 03:50:33,132] Setting status of trial#14 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 03:50:34,607] Setting status of trial#15 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 03:54:46,258] Finished trial#16 resulted in value: 0.8060046188917593. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 04:10:52,185] Finished trial#17 resulted in value: 0.8198614319165548. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 04:10:53,508] Setting status of trial#18 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:10:54,664] Setting status of trial#19 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:10:56,361] Setting status of trial#20 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:26:59,917] Finished trial#21 resulted in value: 0.834103156228172. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 04:27:01,361] Setting status of trial#22 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:27:03,259] Setting status of trial#23 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:37:29,064] Finished trial#24 resulted in value: 0.811008468006463. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 04:37:31,520] Setting status of trial#25 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:37:33,313] Setting status of trial#26 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:44:55,009] Finished trial#27 resulted in value: 0.8287143957348766. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 04:44:55,903] Setting status of trial#28 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:44:59,604] Setting status of trial#29 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:45:02,142] Setting status of trial#30 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:45:04,215] Setting status of trial#31 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:45:07,277] Setting status of trial#32 as TrialState.PRUNED. Trial was pruned at epoch 2.
+[I 2019-10-04 04:45:08,997] Setting status of trial#33 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:45:10,944] Setting status of trial#34 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:57:33,517] Finished trial#35 resulted in value: 0.8110084680523479. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 04:57:34,747] Setting status of trial#36 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:57:36,101] Setting status of trial#37 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 04:57:41,723] Setting status of trial#38 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:06:06,966] Finished trial#39 resulted in value: 0.8010007697770557. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 05:06:07,974] Setting status of trial#40 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:06:09,471] Setting status of trial#41 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:06:10,939] Setting status of trial#42 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:06:12,516] Setting status of trial#43 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:06:13,833] Setting status of trial#44 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:06:15,537] Setting status of trial#45 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:06:16,828] Setting status of trial#46 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:17:34,112] Finished trial#47 resulted in value: 0.8017705927177793. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 05:17:35,497] Setting status of trial#48 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:17:36,878] Setting status of trial#49 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:17:37,974] Setting status of trial#50 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:36:32,185] Finished trial#51 resulted in value: 0.8117782909930716. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 05:36:41,873] Setting status of trial#52 as TrialState.PRUNED. Trial was pruned at epoch 3.
+[I 2019-10-04 05:36:44,286] Setting status of trial#53 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:36:46,214] Setting status of trial#54 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:36:48,868] Setting status of trial#55 as TrialState.PRUNED. Trial was pruned at epoch 3.
+[I 2019-10-04 05:36:51,618] Setting status of trial#56 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:36:52,954] Setting status of trial#57 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:46:14,480] Finished trial#58 resulted in value: 0.8244803694691265. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 05:55:59,261] Finished trial#59 resulted in value: 0.798306389530408. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 05:56:00,987] Setting status of trial#60 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:56:03,231] Setting status of trial#61 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:56:05,613] Setting status of trial#62 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:56:09,592] Setting status of trial#63 as TrialState.PRUNED. Trial was pruned at epoch 3.
+[I 2019-10-04 05:56:11,381] Setting status of trial#64 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:56:13,529] Setting status of trial#65 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:56:15,899] Setting status of trial#66 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:56:17,085] Setting status of trial#67 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:56:19,242] Setting status of trial#68 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:56:21,598] Setting status of trial#69 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:56:23,548] Setting status of trial#70 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 05:56:25,611] Setting status of trial#71 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 06:07:22,647] Finished trial#72 resulted in value: 0.8144726712397193. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 06:07:24,460] Setting status of trial#73 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 06:07:25,633] Setting status of trial#74 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 06:07:27,902] Setting status of trial#75 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 06:22:27,155] Finished trial#76 resulted in value: 0.8206312548113934. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 06:22:28,794] Setting status of trial#77 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 06:22:31,663] Setting status of trial#78 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 06:22:33,116] Setting status of trial#79 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 06:22:38,731] Setting status of trial#80 as TrialState.PRUNED. Trial was pruned at epoch 13.
+[I 2019-10-04 06:22:41,042] Setting status of trial#81 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 06:22:43,273] Setting status of trial#82 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 06:22:45,782] Setting status of trial#83 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 06:38:14,394] Finished trial#84 resulted in value: 0.824480369537954. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 06:51:15,894] Finished trial#85 resulted in value: 0.8283294842186297. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 06:51:35,695] Setting status of trial#86 as TrialState.PRUNED. Trial was pruned at epoch 19.
+[I 2019-10-04 07:04:55,589] Finished trial#87 resulted in value: 0.8190916088840611. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 07:04:56,794] Setting status of trial#88 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 07:04:58,218] Setting status of trial#89 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 07:05:00,692] Setting status of trial#90 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 07:21:24,907] Finished trial#91 resulted in value: 0.8190916088840611. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 07:21:29,992] Setting status of trial#92 as TrialState.PRUNED. Trial was pruned at epoch 5.
+[I 2019-10-04 07:21:33,479] Setting status of trial#93 as TrialState.PRUNED. Trial was pruned at epoch 2.
+[I 2019-10-04 07:21:35,905] Setting status of trial#94 as TrialState.PRUNED. Trial was pruned at epoch 3.
+[I 2019-10-04 07:21:38,602] Setting status of trial#95 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 07:21:40,140] Setting status of trial#96 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 07:21:41,820] Setting status of trial#97 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 07:21:45,064] Setting status of trial#98 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 07:21:47,163] Setting status of trial#99 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 07:21:50,202] Setting status of trial#100 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 07:21:52,316] Setting status of trial#101 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 07:37:34,929] Finished trial#102 resulted in value: 0.8394919169050075. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 07:53:59,306] Finished trial#103 resulted in value: 0.8148575827100811. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 08:13:25,285] Finished trial#104 resulted in value: 0.8252501925016202. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 08:13:28,039] Setting status of trial#105 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 08:30:54,003] Finished trial#106 resulted in value: 0.8302540415245537. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 08:30:56,840] Setting status of trial#107 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 08:30:58,500] Setting status of trial#108 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 08:31:00,758] Setting status of trial#109 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 08:31:03,240] Setting status of trial#110 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 08:31:05,063] Setting status of trial#111 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 08:44:43,612] Finished trial#112 resulted in value: 0.8125481139796803. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 08:44:45,670] Setting status of trial#113 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 08:44:47,936] Setting status of trial#114 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 08:44:50,301] Setting status of trial#115 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 08:44:52,818] Setting status of trial#116 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 08:44:54,288] Setting status of trial#117 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:04:11,009] Finished trial#118 resulted in value: 0.840261739753961. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 09:04:13,628] Setting status of trial#119 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:22:43,963] Finished trial#120 resulted in value: 0.8364126250962278. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 09:22:47,787] Setting status of trial#121 as TrialState.PRUNED. Trial was pruned at epoch 2.
+[I 2019-10-04 09:22:50,419] Setting status of trial#122 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:22:53,549] Setting status of trial#123 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:22:56,454] Setting status of trial#124 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:22:59,336] Setting status of trial#125 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:23:02,154] Setting status of trial#126 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:23:04,249] Setting status of trial#127 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:23:07,998] Setting status of trial#128 as TrialState.PRUNED. Trial was pruned at epoch 2.
+[I 2019-10-04 09:23:10,696] Setting status of trial#129 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:23:12,870] Setting status of trial#130 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:23:15,793] Setting status of trial#131 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:23:18,315] Setting status of trial#132 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:23:22,855] Setting status of trial#133 as TrialState.PRUNED. Trial was pruned at epoch 3.
+[I 2019-10-04 09:37:21,031] Finished trial#134 resulted in value: 0.7297921477601196. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 09:37:25,607] Setting status of trial#135 as TrialState.PRUNED. Trial was pruned at epoch 3.
+[I 2019-10-04 09:37:28,247] Setting status of trial#136 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:37:33,202] Setting status of trial#137 as TrialState.PRUNED. Trial was pruned at epoch 3.
+[I 2019-10-04 09:37:35,814] Setting status of trial#138 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:37:38,557] Setting status of trial#139 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:37:41,150] Setting status of trial#140 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:37:44,002] Setting status of trial#141 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:37:50,062] Setting status of trial#142 as TrialState.PRUNED. Trial was pruned at epoch 3.
+[I 2019-10-04 09:37:53,255] Setting status of trial#143 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:37:56,532] Setting status of trial#144 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:37:59,645] Setting status of trial#145 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:38:02,390] Setting status of trial#146 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:38:08,764] Setting status of trial#147 as TrialState.PRUNED. Trial was pruned at epoch 4.
+[I 2019-10-04 09:38:11,126] Setting status of trial#148 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:38:14,613] Setting status of trial#149 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:38:16,995] Setting status of trial#150 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:38:19,086] Setting status of trial#151 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 09:38:23,329] Setting status of trial#152 as TrialState.PRUNED. Trial was pruned at epoch 3.
+[I 2019-10-04 09:54:52,405] Finished trial#153 resulted in value: 0.8264049268668207. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 09:54:55,216] Setting status of trial#154 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 10:11:27,518] Finished trial#155 resulted in value: 0.8433410315168556. Current best value is 0.844495765973826 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 52, 'n_filters_|1': 35, 'n_filters_|2': 8, 'n_layers': 2, 'n_units_l0': 985.3589023513497, 'n_units_l1': 401.1944864458735, 'lr': 0.00022151246111768772}.
+[I 2019-10-04 10:27:28,712] Finished trial#156 resulted in value: 0.8471901462663587. Current best value is 0.8471901462663587 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 50, 'n_filters_|1': 57, 'n_filters_|2': 55, 'n_layers': 1, 'n_units_l0': 852.2543430517079, 'lr': 0.001804346744123182}.
+[I 2019-10-04 10:27:31,480] Setting status of trial#157 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 10:44:47,102] Finished trial#158 resulted in value: 0.8394919168591224. Current best value is 0.8471901462663587 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 50, 'n_filters_|1': 57, 'n_filters_|2': 55, 'n_layers': 1, 'n_units_l0': 852.2543430517079, 'lr': 0.001804346744123182}.
+[I 2019-10-04 10:44:55,206] Setting status of trial#159 as TrialState.PRUNED. Trial was pruned at epoch 6.
+[I 2019-10-04 10:44:58,072] Setting status of trial#160 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 10:45:00,980] Setting status of trial#161 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 10:45:05,348] Setting status of trial#162 as TrialState.PRUNED. Trial was pruned at epoch 2.
+[I 2019-10-04 10:45:10,499] Setting status of trial#163 as TrialState.PRUNED. Trial was pruned at epoch 3.
+[I 2019-10-04 10:45:12,974] Setting status of trial#164 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 10:45:15,586] Setting status of trial#165 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 10:45:18,678] Setting status of trial#166 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 10:45:21,478] Setting status of trial#167 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:03:38,810] Finished trial#168 resulted in value: 0.8267898383371824. Current best value is 0.8471901462663587 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 50, 'n_filters_|1': 57, 'n_filters_|2': 55, 'n_layers': 1, 'n_units_l0': 852.2543430517079, 'lr': 0.001804346744123182}.
+[I 2019-10-04 11:21:36,965] Finished trial#169 resulted in value: 0.8237105465742879. Current best value is 0.8471901462663587 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 50, 'n_filters_|1': 57, 'n_filters_|2': 55, 'n_layers': 1, 'n_units_l0': 852.2543430517079, 'lr': 0.001804346744123182}.
+[I 2019-10-04 11:21:38,750] Setting status of trial#170 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:21:41,512] Setting status of trial#171 as TrialState.PRUNED. Trial was pruned at epoch 3.
+[I 2019-10-04 11:21:44,523] Setting status of trial#172 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:21:48,870] Setting status of trial#173 as TrialState.PRUNED. Trial was pruned at epoch 2.
+[I 2019-10-04 11:32:13,869] Finished trial#174 resulted in value: 0.8329484218170865. Current best value is 0.8471901462663587 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 50, 'n_filters_|1': 57, 'n_filters_|2': 55, 'n_layers': 1, 'n_units_l0': 852.2543430517079, 'lr': 0.001804346744123182}.
+[I 2019-10-04 11:32:15,989] Setting status of trial#175 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:32:18,020] Setting status of trial#176 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:32:20,666] Setting status of trial#177 as TrialState.PRUNED. Trial was pruned at epoch 2.
+[I 2019-10-04 11:32:22,748] Setting status of trial#178 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:32:25,725] Setting status of trial#179 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:32:29,063] Setting status of trial#180 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:32:41,341] Setting status of trial#181 as TrialState.PRUNED. Trial was pruned at epoch 10.
+[I 2019-10-04 11:50:47,651] Finished trial#182 resulted in value: 0.8437259430331023. Current best value is 0.8471901462663587 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 50, 'n_filters_|1': 57, 'n_filters_|2': 55, 'n_layers': 1, 'n_units_l0': 852.2543430517079, 'lr': 0.001804346744123182}.
+[I 2019-10-04 11:50:50,669] Setting status of trial#183 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:50:53,748] Setting status of trial#184 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:50:56,987] Setting status of trial#185 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:50:59,971] Setting status of trial#186 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:51:05,091] Setting status of trial#187 as TrialState.PRUNED. Trial was pruned at epoch 3.
+[I 2019-10-04 11:51:07,172] Setting status of trial#188 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:51:10,093] Setting status of trial#189 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:51:13,448] Setting status of trial#190 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:51:16,449] Setting status of trial#191 as TrialState.PRUNED. Trial was pruned at epoch 2.
+[I 2019-10-04 11:51:19,055] Setting status of trial#192 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:51:21,499] Setting status of trial#193 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:51:27,300] Setting status of trial#194 as TrialState.PRUNED. Trial was pruned at epoch 3.
+[I 2019-10-04 11:51:30,319] Setting status of trial#195 as TrialState.PRUNED. Trial was pruned at epoch 1.
+[I 2019-10-04 11:51:33,143] Setting status of trial#196 as TrialState.PRUNED. Trial was pruned at epoch 2.
+[I 2019-10-04 12:09:43,941] Finished trial#197 resulted in value: 0.8202463433410315. Current best value is 0.8471901462663587 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 50, 'n_filters_|1': 57, 'n_filters_|2': 55, 'n_layers': 1, 'n_units_l0': 852.2543430517079, 'lr': 0.001804346744123182}.
+[I 2019-10-04 12:25:43,485] Finished trial#198 resulted in value: 0.8140877598611275. Current best value is 0.8471901462663587 with parameters: {'n_conv1d_layers': 3, 'n_filters_|0': 50, 'n_filters_|1': 57, 'n_filters_|2': 55, 'n_layers': 1, 'n_units_l0': 852.2543430517079, 'lr': 0.001804346744123182}.
+[I 2019-10-04 12:25:47,729] Setting status of trial#199 as TrialState.PRUNED. Trial was pruned at epoch 2.
+Study statistics: 
+  Number of pruned trials:  157
+  Number of complete trials:  43
+Best trial:
+  Value:  0.8471901462663587
+  Params: 
+    n_conv1d_layers: 3
+    n_filters_|0: 50
+    n_filters_|1: 57
+    n_filters_|2: 55
+    n_layers: 1
+    n_units_l0: 852.2543430517079
+    lr: 0.001804346744123182
+36222 sec
+
