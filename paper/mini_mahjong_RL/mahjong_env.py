@@ -5,7 +5,7 @@ import random
 from gym.envs.registration import EnvSpec
 
 class MahjongEnv(gym.Env):
-    def __init__(self, process_idx=0, kind_tile=9, num_hand=5, max_episode_step=100, hand_mode=1, simple_mode=False, network='mydense', debug=True):
+    def __init__(self, process_idx=0, kind_tile=9, num_hand=5, max_episode_step=100, hand_mode=1, simple_mode=False, network='mydense', reward_scale=100, debug=True):
         self.process_idx = process_idx
         self.action_space = gym.spaces.Discrete(kind_tile)
         self.kind_tile = kind_tile
@@ -16,10 +16,11 @@ class MahjongEnv(gym.Env):
         self.max_episode_step = max_episode_step
         self.hand_mode = hand_mode # 1 or 2 or 3
         self.simple_mode = simple_mode
+        self.reward_scale = reward_scale
         if self.simple_mode:
-            self.reward_range = (-1.0, 1.0)
+            self.reward_range = (-reward_scale, reward_scale)
         else:
-            self.reward_range = (-1.0, 4.0)
+            self.reward_range = (-reward_scale, 4 * reward_scale)
         self.NUM_SAME_TILE = 4 # 同一牌の枚数は4で固定
         self.network = network
         if hand_mode == 1:
@@ -31,7 +32,9 @@ class MahjongEnv(gym.Env):
         if self.network == 'myconv2d':
             ob_space_shape.append(1) # conv2dの時は次元を一つ増やす
         self.observation_space = gym.spaces.Box(low=0.0, high=1.0, shape=tuple(ob_space_shape), dtype=np.float32)
-            
+
+
+        
     def draw_hand(self):
         while True:
             all_pi = np.array([i for i in range(self.kind_tile) for j in range(self.NUM_SAME_TILE)])
@@ -62,8 +65,11 @@ class MahjongEnv(gym.Env):
         elif self.hand_mode == 3: # 2に近いが、小さい数を1で埋めたもの 
             r = np.zeros(shape=(self.kind_tile, self.NUM_SAME_TILE), dtype=np.float32)
             for i in range(self.kind_tile):
-                for j in range(self.hand[i]):
-                    r[i][j] = 1.0
+                if self.hand[i] == 0.0:
+                    continue
+                else: # 52 - 54 いらない
+                    for j in range(self.hand[i]):
+                        r[i][j] = 1.0
         #print(self.hand)
         #print(r)
         return r    
@@ -82,7 +88,7 @@ class MahjongEnv(gym.Env):
         if self.hand[act] == 0: # 切れない牌を切るときはマイナスの報酬
             if self.debug:
                 print('no tile! hand = {}, action = {}'.format(self.hand, act))
-            return self.obs(), -1.0, False, dict()
+            return self.obs(), - self.reward_scale, False, dict()
         self.hand[act] -= 1 # 牌を切る
         all_pi = np.array([i for i in range(self.kind_tile) for j in range(self.NUM_SAME_TILE - self.hand[i])])
         pi = all_pi[random.randrange(len(all_pi))]
@@ -97,6 +103,6 @@ class MahjongEnv(gym.Env):
                 win_point = mahjong_utils.yaku_point(split_state)
             if self.debug:
                 print('win! actions={}'.format(self.actions))
-            return self.obs(), 1.0 * win_point, True, dict()
+            return self.obs(), self.reward_scale * win_point, True, dict()
         return self.obs(), 0.0, False, dict()
 
