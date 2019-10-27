@@ -32,6 +32,10 @@ tensorflow, keras, numpy, pandas, matplotlib, sklearn, optuna, openai baselines,
 
 `python mini_mahjong_pnplot_split.py`
 
-基本的にはどのpyファイルも上記のように実行するだけですが、paperフォルダのmini_mahjong_RLだけはtrain_test.pyを実行するようにしてください。
+基本的にはどのpyファイルも上記のように実行するだけですが、paperフォルダのmini_mahjong_RLディレクトリだけは少し異なります。
+
+mahjong_env.pyは一人麻雀の環境を作っており、mahjong_utils.pyは麻雀の役判定やあがり判定などをおいているだけで、mahjong_networks.pyはQ関数を構築しているだけなので、直接実行はしません。学習をさせる時にtrain.pyを実行し、その実行結果と理論値を比較するにはeval_model.pyを実行してください。層の数などのネットワークや手牌の枚数などの麻雀の条件を変えるには、train.pyもeval_model.pyもオプションを付けて変更します。詳しくは
+`python train.py -h`
+を見てください。
 
 ipynbファイルはそのまま開けばコードと結果を見ることができます。上から順に実行していってください。
