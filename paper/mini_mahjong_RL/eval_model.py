@@ -1,5 +1,4 @@
-#from baselines import deepq
-import deepq
+from baselines import deepq
 from baselines import logger
 import argparse
 import mahjong_env
