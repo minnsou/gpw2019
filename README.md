@@ -39,3 +39,8 @@ mahjong_env.pyは一人麻雀の環境を作っており、mahjong_utils.pyは�
 を見てください。
 
 ipynbファイルはそのまま開けばコードと結果を見ることができます。上から順に実行していってください。
+
+## paper
+
+本論文はこちら
+https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=199990&item_no=1&page_id=13&block_id=8
