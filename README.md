@@ -1,6 +1,6 @@
 ## Overview
 
-GPW 2019用のレポジトリです。麻雀におけるpolicy function関連の研究に用いたコードをおいています。
+GPW 2019用のレポジトリです。麻雀におけるpolicy function関連の研究に用いたコードやその結果などを置いています。
 
 abstractディレクトリは、extended abstractの実験のコードとその結果を載せています。
 
@@ -40,13 +40,11 @@ mahjong_env.pyは一人麻雀の環境を作っており、mahjong_utils.pyは�
 
 ipynbファイルはそのまま開けばコードと結果を見ることができます。上から順に実行していってください。
 
-## paper
+## Paper
 
-本論文はこちら（リンク先は情報処理学会）
+本論文は[こちら](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=199990&item_no=1&page_id=13&block_id=8)（リンク先は情報処理学会）
 
-https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=199990&item_no=1&page_id=13&block_id=8
-
-ポスターはposter.pdfをご覧ください
+ポスターはposter.pdfをご覧ください。
 
 ### 本論文のお詫びと訂正
 
@@ -54,9 +52,14 @@ https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_
 
 p3 4.教師あり学習　２段落目
 
+①
+
 （誤）役がある時とない時で最善手が変わる手牌は 11385 個のうち...
 
 （正）役がある時とない時で最善手が変わる手牌は 10389 個のうち...
+
+
+②
 
 （誤）その価値の差がもっとも大きい手牌は 11222334 で...役なしにおける最善手は3で...役ありにおける最善手は4で...
 
