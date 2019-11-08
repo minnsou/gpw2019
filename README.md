@@ -44,7 +44,7 @@ ipynbファイルはそのまま開けばコードと結果を見ることがで
 
 本論文は[こちら](https://ipsj.ixsq.nii.ac.jp/ej/?action=pages_view_main&active_action=repository_view_main_item_detail&item_id=199990&item_no=1&page_id=13&block_id=8)（リンク先は情報処理学会）
 
-ポスターはposter.pdfをご覧ください。
+ポスターは[poster.pdf](https://github.com/minnsou/gpw2019/blob/master/poster.pdf)をご覧ください。
 
 ### 本論文のお詫びと訂正
 
