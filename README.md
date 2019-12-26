@@ -6,6 +6,8 @@ abstractディレクトリは、extended abstractの実験のコードとその�
 
 paperのディレクトリは、論文の実験のコードとその結果を載せています。
 
+この研究で扱ったミニ麻雀（1人麻雀）をUnityで作りました。[ここ]()で公開します。（リンク先は準備中）
+
 ## Description
 
 abstractフォルダには3層MLPの実験、Gaoらの再現実験、築地らの再現実験、Residual Blockの実験の4つのコードとその結果を置いています。
